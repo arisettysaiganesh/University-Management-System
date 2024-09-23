@@ -4,73 +4,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>University Management</title>
+    <title>University Management System</title>
   </head>
   <body>
-    <h1>University Management System</h1>
+    <div class="container">
+      <h1>University Management System</h1>
 
-    <h2>Add Student</h2>
-    <input id="studentName" type="text" placeholder="Enter student name" />
-    <button onclick="addStudent()">Add Student</button>
+      <div class="form-section">
+        <h2>Add Student</h2>
+        <input id="studentName" type="text" placeholder="Enter student name" />
+        <button onclick="addStudent()">Add Student</button>
+      </div>
 
-    <h2>Add Professor</h2>
-    <input id="professorName" type="text" placeholder="Enter professor name" />
-    <button onclick="addProfessor()">Add Professor</button>
+      <div class="form-section">
+        <h2>Add Professor</h2>
+        <input
+          id="professorName"
+          type="text"
+          placeholder="Enter professor name"
+        />
+        <button onclick="addProfessor()">Add Professor</button>
+      </div>
 
-    <h2>Add Course</h2>
-    <input id="courseTitle" type="text" placeholder="Enter course title" />
-    <button onclick="addCourse()">Add Course</button>
+      <div class="form-section">
+        <h2>Add Course</h2>
+        <input id="courseTitle" type="text" placeholder="Enter course title" />
+        <button onclick="addCourse()">Add Course</button>
+      </div>
 
-    <h2>Enroll Student in Course</h2>
-    <input
-      id="enrollStudentName"
-      type="text"
-      placeholder="Enter student name"
-    />
-    <input
-      id="enrollCourseTitle"
-      type="text"
-      placeholder="Enter course title"
-    />
-    <button onclick="enrollStudent()">Enroll</button>
+      <div class="form-section">
+        <h2>Enroll Student in Course</h2>
+        <input
+          id="enrollStudentName"
+          type="text"
+          placeholder="Enter student name"
+        />
+        <input
+          id="enrollCourseTitle"
+          type="text"
+          placeholder="Enter course title"
+        />
+        <button onclick="enrollStudent()">Enroll</button>
+      </div>
 
-    <h2>Assign Course to Professor</h2>
-    <input
-      id="assignProfessorName"
-      type="text"
-      placeholder="Enter professor name"
-    />
-    <input
-      id="assignCourseTitle"
-      type="text"
-      placeholder="Enter course title"
-    />
-    <button onclick="assignCourse()">Assign Course</button>
+      <div class="form-section">
+        <h2>Assign Course to Professor</h2>
+        <input
+          id="assignProfessorName"
+          type="text"
+          placeholder="Enter professor name"
+        />
+        <input
+          id="assignCourseTitle"
+          type="text"
+          placeholder="Enter course title"
+        />
+        <button onclick="assignCourse()">Assign Course</button>
+      </div>
 
-    <h2>List Students</h2>
-    <button onclick="listStudents()">List Students</button>
+      <div class="form-section">
+        <h2>Actions</h2>
+        <button onclick="listStudents()">List Students</button>
+        <button onclick="listProfessors()">List Professors</button>
+        <button onclick="listCourses()">List Courses</button>
+      </div>
 
-    <h2>List Professors</h2>
-    <button onclick="listProfessors()">List Professors</button>
+      <div class="form-section">
+        <h2>Display Student Courses</h2>
+        <input
+          id="displayStudentName"
+          type="text"
+          placeholder="Enter student name"
+        />
+        <button onclick="displayStudentCourses()">Display Courses</button>
+      </div>
 
-    <h2>List Courses</h2>
-    <button onclick="listCourses()">List Courses</button>
+      <div class="form-section">
+        <h2>Display Professor Courses</h2>
+        <input
+          id="displayProfessorName"
+          type="text"
+          placeholder="Enter professor name"
+        />
+        <button onclick="displayProfessorCourses()">Display Courses</button>
+      </div>
 
-    <h2>Display Student Courses</h2>
-    <input
-      id="displayStudentName"
-      type="text"
-      placeholder="Enter student name"
-    />
-    <button onclick="displayStudentCourses()">Display Courses</button>
-
-    <h2>Display Professor Courses</h2>
-    <input
-      id="displayProfessorName"
-      type="text"
-      placeholder="Enter professor name"
-    />
-    <button onclick="displayProfessorCourses()">Display Courses</button>
+      <div id="response" class="response"></div>
+    </div>
 
     <script src="script.js"></script>
   </body>

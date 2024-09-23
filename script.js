@@ -1,70 +1,3 @@
-const apiUrl = "http://localhost:8080/api"; // Adjust this URL based on your backend configuration
-
-async function addStudent() {
-  const name = document.getElementById("studentName").value;
-  await fetch(`${apiUrl}/students`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name }),
-  });
-}
-
-async function addProfessor() {
-  const name = document.getElementById("professorName").value;
-  await fetch(`${apiUrl}/professors`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name }),
-  });
-}
-
-async function addCourse() {
-  const title = document.getElementById("courseTitle").value;
-  await fetch(`${apiUrl}/courses`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ title }),
-  });
-}
-
-async function enrollStudent() {
-  const studentName = document.getElementById("enrollStudentName").value;
-  const courseTitle = document.getElementById("enrollCourseTitle").value;
-  await fetch(`${apiUrl}/enroll`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ studentName, courseTitle }),
-  });
-}
-
-async function assignCourse() {
-  const professorName = document.getElementById("assignProfessorName").value;
-  const courseTitle = document.getElementById("assignCourseTitle").value;
-  await fetch(`${apiUrl}/assign`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ professorName, courseTitle }),
-  });
-}
-
-async function listStudents() {
-  const response = await fetch(`${apiUrl}/students`);
-  const students = await response.json();
-  document.getElementById("studentList").innerText = JSON.stringify(students);
-}
-
-async function listProfessors() {
-  const response = await fetch(`${apiUrl}/professors`);
-  const professors = await response.json();
-  document.getElementById("professorList").innerText =
-    JSON.stringify(professors);
-}
-
-async function listCourses() {
-  const response = await fetch(`${apiUrl}/courses`);
-  const courses = await response.json();
-  document.getElementById("courseList").innerText = JSON.stringify(courses);
-}
 // Simulating a simple in-memory database using local storage
 class UniversityManagement {
   constructor() {
@@ -94,10 +27,9 @@ class UniversityManagement {
     if (student && course && !student.enrolledCourses.includes(courseTitle)) {
       student.enrolledCourses.push(courseTitle);
       this.saveData("students", this.students);
+      return `${studentName} has been enrolled in ${courseTitle}.`;
     } else {
-      alert(
-        "Student or course not found, or student already enrolled in this course."
-      );
+      return "Student or course not found, or student already enrolled in this course.";
     }
   }
 
@@ -111,10 +43,9 @@ class UniversityManagement {
     ) {
       professor.assignedCourses.push(courseTitle);
       this.saveData("professors", this.professors);
+      return `${courseTitle} has been assigned to ${professorName}.`;
     } else {
-      alert(
-        "Professor or course not found, or professor already assigned to this course."
-      );
+      return "Professor or course not found, or professor already assigned to this course.";
     }
   }
 
@@ -169,55 +100,86 @@ const uniManagement = new UniversityManagement();
 function addStudent() {
   const name = document.getElementById("studentName").value;
   uniManagement.addStudent(name);
-  alert(`Student ${name} added.`);
+  showResponse(`Student ${name} added.`);
+  document.getElementById("studentName").value = "";
 }
 
 function addProfessor() {
   const name = document.getElementById("professorName").value;
   uniManagement.addProfessor(name);
-  alert(`Professor ${name} added.`);
+  showResponse(`Professor ${name} added.`);
+  document.getElementById("professorName").value = "";
 }
 
 function addCourse() {
   const title = document.getElementById("courseTitle").value;
   uniManagement.addCourse(title);
-  alert(`Course ${title} added.`);
+  showResponse(`Course ${title} added.`);
+  document.getElementById("courseTitle").value = "";
 }
 
 function enrollStudent() {
   const studentName = document.getElementById("enrollStudentName").value;
   const courseTitle = document.getElementById("enrollCourseTitle").value;
-  uniManagement.enrollStudentInCourse(studentName, courseTitle);
-  alert(`Enrolled ${studentName} in ${courseTitle}.`);
+  const message = uniManagement.enrollStudentInCourse(studentName, courseTitle);
+  showResponse(message);
+  document.getElementById("enrollStudentName").value = "";
+  document.getElementById("enrollCourseTitle").value = "";
 }
 
 function assignCourse() {
   const professorName = document.getElementById("assignProfessorName").value;
   const courseTitle = document.getElementById("assignCourseTitle").value;
-  uniManagement.assignCourseToProfessor(professorName, courseTitle);
-  alert(`Assigned ${courseTitle} to ${professorName}.`);
+  const message = uniManagement.assignCourseToProfessor(
+    professorName,
+    courseTitle
+  );
+  showResponse(message);
+  document.getElementById("assignProfessorName").value = "";
+  document.getElementById("assignCourseTitle").value = "";
 }
 
 function listStudents() {
-  alert("Students: \n" + uniManagement.listStudents().join("\n"));
+  const students =
+    uniManagement.listStudents().join(", ") || "No students available.";
+  showResponse(`Students: ${students}`);
 }
 
 function listProfessors() {
-  alert("Professors: \n" + uniManagement.listProfessors().join("\n"));
+  const professors =
+    uniManagement.listProfessors().join(", ") || "No professors available.";
+  showResponse(`Professors: ${professors}`);
 }
 
 function listCourses() {
-  alert("Courses: \n" + uniManagement.listCourses().join("\n"));
+  const courses =
+    uniManagement.listCourses().join(", ") || "No courses available.";
+  showResponse(`Courses: ${courses}`);
 }
 
 function displayStudentCourses() {
   const studentName = document.getElementById("displayStudentName").value;
   const courses = uniManagement.getStudentCourses(studentName);
-  alert(`Courses for ${studentName}: \n` + courses.join("\n"));
+  showResponse(
+    `Courses for ${studentName}: ${courses.join(", ") || "No courses found."}`
+  );
 }
 
 function displayProfessorCourses() {
   const professorName = document.getElementById("displayProfessorName").value;
   const courses = uniManagement.getProfessorCourses(professorName);
-  alert(`Courses assigned to ${professorName}: \n` + courses.join("\n"));
+  showResponse(
+    `Courses assigned to ${professorName}: ${
+      courses.join(", ") || "No courses found."
+    }`
+  );
+}
+
+function showResponse(message) {
+  const responseDiv = document.getElementById("response");
+  responseDiv.innerText = message;
+  responseDiv.style.display = "block";
+  setTimeout(() => {
+    responseDiv.style.display = "none";
+  }, 3000); // Hide after 3 seconds
 }
