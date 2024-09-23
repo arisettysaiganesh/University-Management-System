@@ -3,66 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>University Management System</title>
     <link rel="stylesheet" href="styles.css" />
+    <title>University Management</title>
   </head>
   <body>
     <h1>University Management System</h1>
-    <div id="app">
-      <h2>Add Student</h2>
-      <input type="text" id="studentName" placeholder="Enter student name" />
-      <button onclick="addStudent()">Add Student</button>
 
-      <h2>Add Professor</h2>
-      <input
-        type="text"
-        id="professorName"
-        placeholder="Enter professor name"
-      />
-      <button onclick="addProfessor()">Add Professor</button>
+    <h2>Add Student</h2>
+    <input id="studentName" type="text" placeholder="Enter student name" />
+    <button onclick="addStudent()">Add Student</button>
 
-      <h2>Add Course</h2>
-      <input type="text" id="courseTitle" placeholder="Enter course title" />
-      <button onclick="addCourse()">Add Course</button>
+    <h2>Add Professor</h2>
+    <input id="professorName" type="text" placeholder="Enter professor name" />
+    <button onclick="addProfessor()">Add Professor</button>
 
-      <h2>Enroll Student in Course</h2>
-      <input
-        type="text"
-        id="enrollStudentName"
-        placeholder="Enter student name"
-      />
-      <input
-        type="text"
-        id="enrollCourseTitle"
-        placeholder="Enter course title"
-      />
-      <button onclick="enrollStudent()">Enroll</button>
+    <h2>Add Course</h2>
+    <input id="courseTitle" type="text" placeholder="Enter course title" />
+    <button onclick="addCourse()">Add Course</button>
 
-      <h2>Assign Course to Professor</h2>
-      <input
-        type="text"
-        id="assignProfessorName"
-        placeholder="Enter professor name"
-      />
-      <input
-        type="text"
-        id="assignCourseTitle"
-        placeholder="Enter course title"
-      />
-      <button onclick="assignCourse()">Assign</button>
+    <h2>Enroll Student in Course</h2>
+    <input
+      id="enrollStudentName"
+      type="text"
+      placeholder="Enter student name"
+    />
+    <input
+      id="enrollCourseTitle"
+      type="text"
+      placeholder="Enter course title"
+    />
+    <button onclick="enrollStudent()">Enroll</button>
 
-      <h2>List Students</h2>
-      <button onclick="listStudents()">List Students</button>
-      <div id="studentList"></div>
+    <h2>Assign Course to Professor</h2>
+    <input
+      id="assignProfessorName"
+      type="text"
+      placeholder="Enter professor name"
+    />
+    <input
+      id="assignCourseTitle"
+      type="text"
+      placeholder="Enter course title"
+    />
+    <button onclick="assignCourse()">Assign Course</button>
 
-      <h2>List Professors</h2>
-      <button onclick="listProfessors()">List Professors</button>
-      <div id="professorList"></div>
+    <h2>List Students</h2>
+    <button onclick="listStudents()">List Students</button>
 
-      <h2>List Courses</h2>
-      <button onclick="listCourses()">List Courses</button>
-      <div id="courseList"></div>
-    </div>
+    <h2>List Professors</h2>
+    <button onclick="listProfessors()">List Professors</button>
+
+    <h2>List Courses</h2>
+    <button onclick="listCourses()">List Courses</button>
+
+    <h2>Display Student Courses</h2>
+    <input
+      id="displayStudentName"
+      type="text"
+      placeholder="Enter student name"
+    />
+    <button onclick="displayStudentCourses()">Display Courses</button>
+
+    <h2>Display Professor Courses</h2>
+    <input
+      id="displayProfessorName"
+      type="text"
+      placeholder="Enter professor name"
+    />
+    <button onclick="displayProfessorCourses()">Display Courses</button>
 
     <script src="script.js"></script>
   </body>
