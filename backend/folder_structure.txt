@@ -1,0 +1,89 @@
+ Volume in drive C is Windows
+ Volume Serial Number is 0C4D-41B0
+
+ Directory of C:\Users\arise\OneDrive\Desktop\CodeGnan\JavaCodes\UniversityManagemantSystem
+
+23-09-2024  22:19    <DIR>          .
+23-09-2024  22:20    <DIR>          ..
+23-09-2024  14:52               396 .classpath
+23-09-2024  16:13                 6 .gitignore
+23-09-2024  14:52               402 .project
+23-09-2024  14:52    <DIR>          .settings
+23-09-2024  14:55    <DIR>          bin
+23-09-2024  22:21                 0 folder_structure.txt
+23-09-2024  14:55    <DIR>          src
+               4 File(s)            804 bytes
+
+ Directory of C:\Users\arise\OneDrive\Desktop\CodeGnan\JavaCodes\UniversityManagemantSystem\.settings
+
+23-09-2024  14:52    <DIR>          .
+23-09-2024  22:19    <DIR>          ..
+23-09-2024  14:52                57 org.eclipse.core.resources.prefs
+23-09-2024  14:52               781 org.eclipse.jdt.core.prefs
+               2 File(s)            838 bytes
+
+ Directory of C:\Users\arise\OneDrive\Desktop\CodeGnan\JavaCodes\UniversityManagemantSystem\bin
+
+23-09-2024  14:55    <DIR>          .
+23-09-2024  22:19    <DIR>          ..
+23-09-2024  14:55    <DIR>          com
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\arise\OneDrive\Desktop\CodeGnan\JavaCodes\UniversityManagemantSystem\bin\com
+
+23-09-2024  14:55    <DIR>          .
+23-09-2024  14:55    <DIR>          ..
+23-09-2024  14:55    <DIR>          codegnan
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\arise\OneDrive\Desktop\CodeGnan\JavaCodes\UniversityManagemantSystem\bin\com\codegnan
+
+23-09-2024  14:55    <DIR>          .
+23-09-2024  14:55    <DIR>          ..
+23-09-2024  15:21    <DIR>          universitymanagement
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\arise\OneDrive\Desktop\CodeGnan\JavaCodes\UniversityManagemantSystem\bin\com\codegnan\universitymanagement
+
+23-09-2024  15:21    <DIR>          .
+23-09-2024  14:55    <DIR>          ..
+23-09-2024  15:16               572 Course.class
+23-09-2024  16:06             1,260 Professor.class
+23-09-2024  16:06             1,256 Student.class
+23-09-2024  16:04             7,063 UniversityManagement.class
+               4 File(s)         10,151 bytes
+
+ Directory of C:\Users\arise\OneDrive\Desktop\CodeGnan\JavaCodes\UniversityManagemantSystem\src
+
+23-09-2024  14:55    <DIR>          .
+23-09-2024  22:19    <DIR>          ..
+23-09-2024  14:55    <DIR>          com
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\arise\OneDrive\Desktop\CodeGnan\JavaCodes\UniversityManagemantSystem\src\com
+
+23-09-2024  14:55    <DIR>          .
+23-09-2024  14:55    <DIR>          ..
+23-09-2024  14:55    <DIR>          codegnan
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\arise\OneDrive\Desktop\CodeGnan\JavaCodes\UniversityManagemantSystem\src\com\codegnan
+
+23-09-2024  14:55    <DIR>          .
+23-09-2024  14:55    <DIR>          ..
+23-09-2024  15:21    <DIR>          universitymanagement
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\arise\OneDrive\Desktop\CodeGnan\JavaCodes\UniversityManagemantSystem\src\com\codegnan\universitymanagement
+
+23-09-2024  15:21    <DIR>          .
+23-09-2024  14:55    <DIR>          ..
+23-09-2024  15:16               394 Course.java
+23-09-2024  16:06             1,584 Professor.java
+23-09-2024  16:06             1,543 Student.java
+23-09-2024  16:04             9,688 UniversityManagement.java
+               4 File(s)         13,209 bytes
+
+     Total Files Listed:
+              14 File(s)         25,002 bytes
+              29 Dir(s)  48,436,887,552 bytes free

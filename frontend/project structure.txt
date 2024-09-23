@@ -1,0 +1,9 @@
+university-management/
+│
+├── backend/
+│   └── (Java files)
+│
+├── frontend/
+│   ├── index.html
+│   ├── styles.css
+│   └── script.js
